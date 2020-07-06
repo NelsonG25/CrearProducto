@@ -1,0 +1,43 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block css %} 
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+{% endblock %}
+
+{% block contenido %}
+
+        <section id="banner">
+            <img src="{% static 'core/imagenes/Shiprincipal.jpg' %}">
+            <div class="contenedor">
+            <h9>Agregar Proveedores</h9>
+            </div>
+        </section>
+
+        {{mensaje}}
+        <section id="blog">
+            <script src="{% static 'core/js/regiones_comunas.js' %}"></script>
+            <div class="sector-formulario">
+                <br><br><br>
+                <form action="" method="POST" class="formulario">
+                    {% csrf_token %}
+                    <h4 class="formulario_titulo">Añadir nuevo proveedor</h4>
+                    <div class="contenedor-inputs">
+                        <table>
+                            {{ form.as_table }}
+                        </table>
+                        <input type="submit" value="Agregar" class="btn-enviar">
+                        <input type="reset" value="Limpiar" class="btn-enviar">
+                        <br>
+
+                    </div>
+                </form>
+
+            </div>
+
+        </section>
+
+{% endblock %}

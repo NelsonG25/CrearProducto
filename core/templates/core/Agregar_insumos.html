@@ -1,0 +1,36 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+
+{% block contenido %}
+
+
+        <section id="banner">
+            <img src="{% static 'core/imagenes/Shiprincipal.jpg' %}">
+            <div class="contenedor">
+            <h9>Agregar insumo</h9>
+            </div>
+        </section>
+
+        {{mensaje}}
+        <main id="contenido">
+            
+            <div class="sector-formulario">
+                <br><br>
+                <form action="" method="POST" class="formulario">
+                    {% csrf_token %}
+                    <h4 class="formulario_titulo">Añadir nuevo insumo</h4>
+                    <div class="contenedor-inputs">
+                        <table>
+                                {{ form.as_table }}
+                        </table>
+                        <input type="submit" value="Agregar" class="btn-enviar">
+                        <input type="reset" value="Limpiar" class="btn-enviar">
+                        <br>
+
+                    </div>
+                </form>
+            </div>
+
+{% endblock %}

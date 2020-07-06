@@ -1,0 +1,61 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block javascript %}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script src="{% static 'core/js/confirmacion.js' %}"></script>
+{% endblock %}
+
+
+
+{% block contenido %} 
+
+        <section id="banner">
+            <img src="{% static 'core/imagenes/Shiprincipal.jpg' %}">
+            <div class="contenedor">
+            <h9>Lista de Proveedores</h9>
+            </div>
+        </section>
+
+
+        <section id="blog">
+            <div class="listar_proveedor">
+                <h3>Ver Proveedores</h3>
+                <div class="filtro"> 
+                    <label class="input-62">Filtrar por RUT o ID: </label>
+                    <input type="text" name="filtrar" placeholder="Filtrar por Rut" class="input-65" required> 
+                    <input type="submit" value="Buscar" class="btn-opcion">
+                </div>
+                <table border="4">
+                    <tr>
+                        <th>Rut</th>
+                        <th>Nombre</th>
+                        <th>Fono</th>
+                        <th>Email</th>
+                        <th>Dirección</th>
+                        <th>Comuna</th>
+                        <th>Giro comercial</th>
+                        <th>Razon Social</th>
+                      </tr>
+                    <!--consulta base datos-->
+                     {% for proveedor in proveedores %}
+                     <tr>
+                      <td>{{proveedor.0}}</td>
+                      <td>{{proveedor.1}}</td>
+                      <td>{{proveedor.2}}</td>
+                      <td>{{proveedor.3}}</td>
+                      <td><img src="{{proveedor.4}}" alt=""></td>
+                      <td>{{proveedor.5}}</td>
+                      <td>{{proveedor.6}}</td>
+                      <td>{{proveedor.7}}</td>
+
+                    </tr>
+                     {% endfor %}
+                </table>
+            </div>
+
+        </section>
+
+{% endblock %}
+

@@ -1,0 +1,142 @@
+.sector-formulario{
+    margin: auto;
+    font-family: sans-serif;
+    background:#2b8032;
+    margin-top: 10%;
+    margin-block-end: 3%;
+    padding-block-end: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: 650px;
+    border-radius: 10px;
+}
+
+.formulario{
+    width: 95%;
+    margin: auto;
+    background: white;
+    border-radius: 8px;
+    max-width: 530px;
+
+}
+
+.contenedor-inputs{
+    padding: 20px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.formulario_titulo{
+    background: #014205;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-weight: 100;
+    font-size: 30px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border-bottom: 5px solid #014205;
+}
+
+.formulario input{
+    margin-bottom: 15px;
+    margin: 10px;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #014205;
+}
+
+.input-45{
+    width: 48%;
+}
+
+.input-100{
+    width: 95%;
+}
+
+.contenedor-inputs textarea{
+    padding: 20px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #014205;
+    margin-bottom: 15px;
+    margin: 10px;
+}
+
+.sector-formulario h3{
+    text-align: left;
+    padding: 10px;
+    width: 100%;
+    color: #fff;
+}
+
+.formulario h5{
+    text-align: center;
+    padding: 3px;
+    width: 100%;
+}
+
+.btn-enviar{
+    background: #014205;
+    width: 95%;
+    color: #fff;
+    margin: auto;
+    padding: 10px 40px;
+    cursor: pointer;
+    font-size: 50px;
+}
+
+.btn-enviar:active{
+transform: scale(1.05);
+}
+
+.formulario_link{
+    width: 100%;
+    margin: 7px;
+    font-size: 14px;
+    text-align: left;
+}
+
+#regiones{
+    width: 50%;
+    margin-bottom: 15px;
+    margin: 10px;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #014205;
+}
+#comunas{
+    width: 42%;
+    margin-bottom: 15px;
+    margin: 10px;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #014205;
+}
+
+.contenedor-inputs h6{
+    font-size: 20px;
+    float: center;
+    margin-left: 15px;;
+    margin-top: 25px;
+}
+
+.contenedor-inputs a{
+    font-size: 20px;
+    float: center;
+    margin-left: 15px;;
+    margin-top: 25px;
+}
+
+.contenedor-inputs input{
+    font-size: 20px;
+    float: center;
+    margin-left: 15px;;
+    margin-top: 25px;
+}

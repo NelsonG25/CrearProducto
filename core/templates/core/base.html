@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    
+    {% block javascript %}
+
+    {% endblock %}
+
+    {% block css %}
+
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'core/css/banner.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/blog.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/estilos.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/fontello.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/info.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/lista.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/menu.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/formulario.css' %}">
+
+</head>
+<body>
+    <header>
+        <div class="contenedor">
+            <h1 class="icon-gamepad">PCHANTERY</h1>
+            <input type="checkbox" id="menu-bar">
+            <label class="icon-menu" for="menu-bar"></label>
+            <nav id="menu" class="menu">
+                <ul>
+                    <li><a href="{% url 'index' %}">Inicio</a></li>
+                    <li><a href="#">Insumos</a>
+                        <ul>
+                            <li><a href="{% url 'agregar_insumos' %}">Agregar</a></li>
+                            <li><a href="{% url 'listar_insumos' %}">Listar</a></li>
+                        </ul>   
+                    </li>
+                    <li><a href="#">Proveedores</a>
+                        <ul>
+                            <li><a href="{% url 'agregar_proveedor' %}">Agregar</a></li>
+                            <li><a href="{% url 'listar_proveedor' %}">Listar</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Crear Producto</a></li>
+                    <li><a href="#">iniciar Sesion</a></li>
+                  </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+
+           {% block contenido %}
+
+           {% endblock %}
+
+
+        <section id="info">
+            <h3>''La experiencia en fabricacion de equipos de alta tecnologia''.</h3>
+
+            <div class="contenedor">
+                <div class="info-draven">
+                    <img src="{% static 'core/imagenes/note.jpg' %}" alt="">
+                    <h4>Notebooks</h4>
+                </div>
+                <div class="info-draven">
+                    <img src="{% static 'core/imagenes/pc.jpg' %}" alt="">
+                    <h4>PCs</h4>
+                </div>
+                <div class="info-draven">
+                    <img src="{% static 'core/imagenes/camara.jpg' %}" alt="">
+                    <h4>Camaras</h4>
+                </div>
+                <div class="info-draven">
+                    <img src="{% static 'core/imagenes/smartphone.jpg' %}" alt="">
+                    <h4>Smartphones</h4>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contenedor">
+            <p class="copy">PChantery &copy; 2020</p>
+            <div class="sociales">
+                <a class="icon-facebook-squared" href="#"></a>
+                <a class="icon-twitter-squared" href="#"></a>
+                <a class="icon-instagram" href="#"></a>
+                <a class="icon-twitch" href="#"></a>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

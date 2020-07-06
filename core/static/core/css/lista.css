@@ -1,0 +1,79 @@
+.listar_proveedor{
+    margin: auto;
+    font-family: sans-serif;
+    background:#2f9436;
+    margin-top: 3%;
+    margin-block-end: 3%;
+    padding-block-end: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 1200px;
+    border-radius: 50px;
+    min-height: 350px;
+}
+
+.listar_proveedor h3{
+    color: white;
+    padding: 25px;
+    margin-top: 150px;
+    text-align: center;
+
+}
+
+.listar_proveedor td{
+    width: 10%;
+    color: white;
+    border-color: #014205;
+    border-radius: 50px;
+    text-align: center;
+    padding: 10px 10px 10px;
+
+}
+
+.listar_proveedor table{
+    padding: 10px 10px 10px;
+    margin-top: 20%;
+    padding: 30px;
+    margin: auto;
+    border-color: rgb(17, 105, 17);
+}
+
+.input-62{
+    color: white;
+
+}
+
+.input-65{
+    border-radius: 5px;
+    width: 52%;
+    position: relative;
+    float: center;
+}
+
+.btn-opcion{
+    position: relative;
+    float: right;
+    padding: 5px;
+    border-radius: 8px;
+    background-color: #0c5811;
+    color: white;
+    border-color: #0c5811;
+    width: 15%;
+
+}
+
+.center{
+    margin-left: 20%;
+}
+
+.filtro{
+    padding: 25px;
+    width: 50%;
+    margin-left: 100px;
+}
+
+.botonOpcion{
+    padding: 30px;
+    margin-right: 8%;
+
+}
