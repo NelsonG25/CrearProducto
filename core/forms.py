@@ -17,4 +17,4 @@ class InsumoForm(ModelForm):
 
     class Meta:
         model = Insumo
-        fields = ['codigo', 'nombre_Insumo', 'descripcion', 'valor', 'marca', 'modelo' ]        
+        fields = ['codigo', 'nombre_Insumo', 'descripcion', 'valor', 'modelo' ]            

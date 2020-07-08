@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import index, Agregar_proveedor,eliminar_proveedor,Modificar_proveedor,Listar_proveedor,Agregar_insumos,Listar_insumos,Modificar_insumos,Eliminar_insumos
+from .views import index, factura, orden_compra, crear_producto, Agregar_proveedor,eliminar_proveedor,Modificar_proveedor,Listar_proveedor,Agregar_insumos,Listar_insumos,Modificar_insumos,Eliminar_insumos
 
 
 urlpatterns = [
@@ -12,4 +12,8 @@ urlpatterns = [
     path('listar_insumos/', Listar_insumos, name="listar_insumos"),
     path('modificar_insumos/<id>/', Modificar_insumos, name="modificar_insumos"),
     path('eliminar_insumos/<id>/', Eliminar_insumos, name="eliminar_insumos"),
+    path('crear_producto', crear_producto, name="crear_producto"),
+    path('orden_compra', orden_compra, name="orden_compra"),
+    path('factura', factura, name="factura"),
+
 ]

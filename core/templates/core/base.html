@@ -45,8 +45,14 @@
                             <li><a href="{% url 'listar_proveedor' %}">Listar</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Crear Producto</a></li>
-                    <li><a href="#">iniciar Sesion</a></li>
+                    <li><a href="#">Crear Producto</a>
+                        <ul>
+                            <li><a href="{% url 'crear_producto' %}">Agregar</a></li>
+                            <li><a href="{% url 'factura' %}">factura</a></li>
+                            <li><a href="{% url 'orden_compra' %}">Orden Compra</a></li>
+                        </ul>
+                    </li>
+
                   </ul>
             </nav>
         </div>

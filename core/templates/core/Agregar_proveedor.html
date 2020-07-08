@@ -1,10 +1,10 @@
 {% extends 'core/base.html' %}
+{% load widget_tweaks %}
 
 {% load static %}
+{% block js %}
+<script src="{% static 'core/js/jspost.js' %}"></script>
 
-{% block css %} 
-
-<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
 {% endblock %}
 
@@ -19,25 +19,49 @@
 
         {{mensaje}}
         <section id="blog">
-            <script src="{% static 'core/js/regiones_comunas.js' %}"></script>
+
             <div class="sector-formulario">
                 <br><br><br>
                 <form action="" method="POST" class="formulario">
                     {% csrf_token %}
-                    <h4 class="formulario_titulo">Añadir nuevo proveedor</h4>
+                    <h4 class="formulario_titulo">Añadir Proveedor</h4>
                     <div class="contenedor-inputs">
                         <table>
-                            {{ form.as_table }}
+                            <p class="campo">Rut:</p><input class="input-form">{{ proveedor.rut_prov }}</input>
+                
+                            <p class="campo">Nombre:</p><input class="input-form">{{ proveedor.nom_com }}</input>
+                            
+                            <p class="campo">Fono: </p><input class="input-form">{{ proveedor.fono }}</input>
+                           
+
+                            <p class="campo">Email:</p><input class="input-form">{{ proveedor.email }}</input>
+                            
+                        
+                            <p class="campo">Direccion: </p><input class="input-form">{{ proveedor.direccion }}</input>
+                           
+                        
+                            <p class="campo">comuna: </p>
+                            
+                            <select class="combobox">
+                                <option >--</option>
+                                {% for comuna in comunas %}
+                                <option value="{{comuna.0}}">{{comuna.1}}</option>
+                                {% endfor %}
+                            </select>
+
+                            <p class="campo">Giro Comercial:</p><input class="input-form">{{ proveedor.giro_com }}</input>
+                            
+                        
+                            <p class="campo">Razon Social:</p><input class="input-form">{{ proveedor.razon_soc }}</input>
+                            
+
                         </table>
                         <input type="submit" value="Agregar" class="btn-enviar">
                         <input type="reset" value="Limpiar" class="btn-enviar">
                         <br>
-
                     </div>
                 </form>
-
             </div>
-
         </section>
 
-{% endblock %}
+{% endblock contenido %}

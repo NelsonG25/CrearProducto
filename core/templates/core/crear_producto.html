@@ -1,51 +1,52 @@
 {% extends 'core/base.html' %}
+{% load widget_tweaks %}
 
 {% load static %}
 
 
 {% block contenido %}
 
-
         <section id="banner">
             <img src="{% static 'core/imagenes/Shiprincipal.jpg' %}">
             <div class="contenedor">
-            <h9>Agregar insumo</h9>
+            <h9>Crear Producto</h9>
             </div>
         </section>
 
         {{mensaje}}
-        <main id="contenido">
-            
+        <section id="blog">
+
             <div class="sector-formulario">
-                <br><br>
+                <br><br><br>
                 <form action="" method="POST" class="formulario">
                     {% csrf_token %}
-                    <h4 class="formulario_titulo">Añadir nuevo insumo</h4>
+                    <h4 class="formulario_titulo">Añadir Producto</h4>
                     <div class="contenedor-inputs">
                         <table>
                             <p class="campo">codigo: </p><input class="input-form"></input>
-                            <p class="campo">Tipo Producto:</p>
+                            <p class="campo">tipo producto: </p>
+                            <br>
                             <select class="combobox">
                                 <option >--</option>
                                 {% for tipo in tipos %}
                                 <option value="{{tipo.1}}">{{tipo.1}}</option>
                                 {% endfor %}
                             </select>
-                            <p class="campo">Nombre insumo:</p><input class="input-form"></input>
-                            <p class="campo">marca:</p><input class="input-form"></input>
-                            <p class="campo">modelo:</p><input class="input-form"></input>
-                            <p class="campo">Descripcion:</p><input class="input-form"></input>
-                            <p class="campo">Valor:</p><input class="input-form"></input>
-                            <p class="campo">imagen:</p><input class="input-form"></input>
-                            <p class="campo">modelo:</p><input class="input-form"></input>
-                                
+                            <p class="campo">Rut Proveedor: </p><input class="input-form"></input>
+                            <p class="campo">Nombre producto: </p><input class="input-form"></input>
+                            <p class="campo">Marca: </p><input class="input-form"></input>
+                            <p class="campo">Modelo: </p><input class="input-form"></input>
+                            <p class="campo">Descripcion: </p><textarea class="input-form"></textarea>
+                            <p class="campo">precio: </p><input class="input-form"></input>
+                            <p class="campo">precio venta: </p><input class="input-form"></input>
+                            <p class="campo">Agregar imagen: </p><input class="input-form" type="file" name="archivo" /><br />            
                         </table>
                         <input type="submit" value="Agregar" class="btn-enviar">
                         <input type="reset" value="Limpiar" class="btn-enviar">
                         <br>
-
                     </div>
                 </form>
             </div>
+        </section>
 
-{% endblock %}
+{% endblock contenido %}

@@ -140,3 +140,29 @@ transform: scale(1.05);
     margin-left: 15px;;
     margin-top: 25px;
 }
+
+.input-form{
+    width: 100%;
+    max-width: 450px;
+    margin-right: 3%;
+
+}
+
+.campo{
+    width: 100%;
+    margin-left: 4%;
+    
+}
+
+.combobox{
+    margin-right: 7%;
+    margin-left: 3%;
+    padding: 20px 15px;
+    display: left;
+    flex-wrap: wrap;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #014205;
+
+    
+}
