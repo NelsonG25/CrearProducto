@@ -27,34 +27,20 @@
                     <h4 class="formulario_titulo">Añadir Proveedor</h4>
                     <div class="contenedor-inputs">
                         <table>
-                            <p class="campo">Rut:</p><input class="input-form">{{ proveedor.rut_prov }}</input>
-                
-                            <p class="campo">Nombre:</p><input class="input-form">{{ proveedor.nom_com }}</input>
-                            
-                            <p class="campo">Fono: </p><input class="input-form">{{ proveedor.fono }}</input>
-                           
-
-                            <p class="campo">Email:</p><input class="input-form">{{ proveedor.email }}</input>
-                            
-                        
-                            <p class="campo">Direccion: </p><input class="input-form">{{ proveedor.direccion }}</input>
-                           
-                        
-                            <p class="campo">comuna: </p>
-                            
-                            <select class="combobox">
+                            <p class="campo">Rut Proveedor:</p><input name="rutProv" class="input-form"></input>
+                            <p class="campo">Nombre:</p><input name="nomCom" class="input-form"></input>
+                            <p class="campo">Fono:</p><input name="fono" class="input-form"></input>
+                            <p class="campo">Email:</p><input name="email" class="input-form"></input>
+                            <p class="campo">Direccion:</p><input name="direc" class="input-form"></input>
+                            <p class="campo">Comuna:</p>
+                            <select class="combobox" name="comuna">
                                 <option >--</option>
                                 {% for comuna in comunas %}
                                 <option value="{{comuna.0}}">{{comuna.1}}</option>
                                 {% endfor %}
                             </select>
-
-                            <p class="campo">Giro Comercial:</p><input class="input-form">{{ proveedor.giro_com }}</input>
-                            
-                        
-                            <p class="campo">Razon Social:</p><input class="input-form">{{ proveedor.razon_soc }}</input>
-                            
-
+                            <p class="campo">Giro Comercial:</p><textarea name="giroCom" class="input-form"></textarea>
+                            <p class="campo">Razon Social:</p><input name="razonSoc" class="input-form"></input>                       
                         </table>
                         <input type="submit" value="Agregar" class="btn-enviar">
                         <input type="reset" value="Limpiar" class="btn-enviar">

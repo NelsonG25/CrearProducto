@@ -7,9 +7,9 @@ import json
 import uuid
  
 #CreacionProducto
-USER_POOL_ID = 'us-east-1_76vsh1h9d'
-CLIENT_ID = '410gjl16ib8k5v1cbvfc2op9vj'
-CLIENT_SECRET = '1k1epffssa0ku6ju15pqd9ldf302ckgj1m1smjiokrh6b1uio8h0'
+USER_POOL_ID = 'us-east-1_3409mO3nH'
+CLIENT_ID = '7kpb39d1a68pkjkkj8rgdc1io1'
+CLIENT_SECRET = '1u419mcp5f4mlkckucnt1q40mk5j91mle22df9pnqn9gau6pip2o'
 
 client = None
 

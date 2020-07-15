@@ -23,17 +23,15 @@
                     <h4 class="formulario_titulo">Enviar Factura</h4>
                     <div class="contenedor-inputs">
                         <table>
-                            <p class="campo">Numero Factura: </p><input class="input-form"></input>
-                            <p class="campo">Rut Proveedor: </p><input class="input-form"></input>
-                            <p class="campo">Fecha: </p><input class="input-form" type="date"></input>
-                            <p class="campo">Total Neto: </p><input class="input-form"></input>
-                            <p class="campo">Numero Orden Compra: </p><input class="input-form"></input>
-                            <p class="campo">Detalle Compra: </p> </p><textarea></textarea>
-                            <p class="campo">*ingrese id producto separado por una coma la cantidad</p>
-                            <p class="campo">(saltar fila para uno nuevo) </p>
-                            <p><br></p>
-                            <p class="campo">Agregar orden de compra: </p><input class="input-form" type="file" name="archivo" /><br />     
-
+                            <p class="campo">Numero Operacion: </p><input name="nroOper" class="input-form"></input>
+                            <p class="campo">Numero Factura: </p><input name="nroFac" class="input-form"></input>
+                            <p class="campo">Rut Proveedor: </p><input name="rutProv" class="input-form"></input>
+                            <p class="campo">Fecha: </p><input name="fecha" class="input-form" type="date"></input>
+                            <p class="campo">Total Neto: </p><input name="totalNeto" class="input-form"></input>
+                            <p class="campo">Codigo Trabajador: </p><input name="codTrab" class="input-form"></input>
+                            <p class="campo">Codigo Departamento: </p><input name="idDep" class="input-form"></input>
+                            <p class="campo">Numero Orden Compra: </p><input name="nroOrden" class="input-form"></input>
+                            <p class="campo">Detalle Compra: </p> </p><textarea name="detCom"></textarea>
                         </table>
                         <input type="submit" value="Agregar" class="btn-enviar">
                         <input type="reset" value="Limpiar" class="btn-enviar">

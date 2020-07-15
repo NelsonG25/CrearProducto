@@ -45,11 +45,14 @@
                       <td>{{proveedor.1}}</td>
                       <td>{{proveedor.2}}</td>
                       <td>{{proveedor.3}}</td>
-                      <td><img src="{{proveedor.4}}" alt=""></td>
-                      <td>{{proveedor.5}}</td>
+                      <td>{{proveedor.4}}</td>
+                    {% for comuna in comunas %}  
+                    {% if proveedor.5 == comuna.0 %}
+                    <td>{{comuna.1}}</td>
+                    {% endif %}
+                    {% endfor %}
                       <td>{{proveedor.6}}</td>
                       <td>{{proveedor.7}}</td>
-
                     </tr>
                      {% endfor %}
                 </table>
