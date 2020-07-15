@@ -1,16 +1,13 @@
-function confirmarEliminacion(id) {
+function confirmarprov(event) {
   Swal.fire({
-    title: '¿Estas seguro de eliminar?',
-    text: "No podrás deshacer esta acción",
-    type: 'warning',
+    title: 'Proveedor Agregado de manera exitosa',
     showCancelButton: true,
     confirmButtonColor: '#3085d6',
     cancelButtonColor: '#d33',
-    confirmButtonText: 'Si, Eliminar!',
-    cancelButtonText: 'Cancelar'
+    confirmButtonText: 'OK!'
   }).then((result) => {
     if (result.value) {
-      window.location.href = "/eliminar_proveedor/"+id+"/";
+      window.location.href = "/agregar_proveedor/";
     }
   })
 }

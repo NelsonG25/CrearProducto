@@ -4,6 +4,10 @@
 {% load static %}
 
 
+{% block javascript %}
+<script src="{% static 'core/js/completar_factura.js' %}"></script>
+{% endblock %}
+
 {% block contenido %}
 
         <section id="banner">
@@ -18,9 +22,31 @@
 
             <div class="sector-formulario">
                 <br><br><br>
+                
+                <form id="form" onsubmit="addPerson(event)" class="formulario">
+                    <section class="group">
+                      <input type="text" id="name" class="input-com" placeholder="Codigo Producto" />
+                      <input type="text" id="lastname" class="input-com" placeholder="Cantidad" />
+                    </section>
+                    <button type="submit">Agregar</button>
+                  </form>
+                  
+                  <table style="display: inline-block">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Codigo Produto</th>
+                        <th>Cantidad</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      
+                    </tbody>
+                  </table>
+                <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
                 <form action="" method="POST" class="formulario">
                     {% csrf_token %}
-                    <h4 class="formulario_titulo">Enviar Factura</h4>
+                    <h4 class="formulario_titulo">Otros datos</h4>
                     <div class="contenedor-inputs">
                         <table>
                             <p class="campo">Numero Operacion: </p><input name="nroOper" class="input-form"></input>
@@ -31,14 +57,16 @@
                             <p class="campo">Codigo Trabajador: </p><input name="codTrab" class="input-form"></input>
                             <p class="campo">Codigo Departamento: </p><input name="idDep" class="input-form"></input>
                             <p class="campo">Numero Orden Compra: </p><input name="nroOrden" class="input-form"></input>
-                            <p class="campo">Detalle Compra: </p> </p><textarea name="detCom"></textarea>
                         </table>
                         <input type="submit" value="Agregar" class="btn-enviar">
                         <input type="reset" value="Limpiar" class="btn-enviar">
                         <br>
                     </div>
                 </form>
+
             </div>
         </section>
+
+
 
 {% endblock contenido %}

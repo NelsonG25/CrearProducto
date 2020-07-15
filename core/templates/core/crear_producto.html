@@ -26,10 +26,17 @@
                             <p class="campo">codigo: </p><input class="input-form"></input>
                             <p class="campo">tipo producto: </p>
                             <br>
-                            <select class="combobox">
+                            <select class="combobox" name="id_estado">
+                                <option >--</option>
+                                {% for estado in estados %}
+                                <option value="{{estado.0}}">{{estado.1}}</option>
+                                {% endfor %}
+                            </select>
+                            <p class="campo">Tipo Producto:</p>
+                            <select class="combobox" name="id_tip_prod">
                                 <option >--</option>
                                 {% for tipo in tipos %}
-                                <option value="{{tipo.1}}">{{tipo.1}}</option>
+                                <option value="{{tipo.0}}">{{tipo.1}}</option>
                                 {% endfor %}
                             </select>
                             <p class="campo">Rut Proveedor: </p><input class="input-form"></input>
