@@ -13,7 +13,7 @@
             </div>
         </section>
 
-        {{mensaje}}
+   
         <main id="contenido">
             
             <div class="sector-formulario">
@@ -23,22 +23,34 @@
                     <h4 class="formulario_titulo">Añadir nuevo insumo</h4>
                     <div class="contenedor-inputs">
                         <table>
-                            <p class="campo">codigo: </p><input class="input-form"></input>
-                            <p class="campo">Tipo Producto:</p>
-                            <select class="combobox">
+                            <p class="campo">Codigo: </p><input name="idProd" class="input-form"></input>
+                            <p class="campo">Estado:</p>
+                            <select class="combobox" name="id_estado">
                                 <option >--</option>
-                                {% for tipo in tipos %}
-                                <option value="{{tipo.1}}">{{tipo.1}}</option>
+                                {% for estado in estados %}
+                                <option value="{{estado.0}}">{{estado.1}}</option>
                                 {% endfor %}
                             </select>
-                            <p class="campo">Nombre insumo:</p><input class="input-form"></input>
-                            <p class="campo">marca:</p><input class="input-form"></input>
-                            <p class="campo">modelo:</p><input class="input-form"></input>
-                            <p class="campo">Descripcion:</p><input class="input-form"></input>
-                            <p class="campo">Valor:</p><input class="input-form"></input>
-                            <p class="campo">imagen:</p><input class="input-form"></input>
-                            <p class="campo">modelo:</p><input class="input-form"></input>
-                                
+                            <p class="campo">Tipo Producto:</p>
+                            <select class="combobox" name="id_tip_prod">
+                                <option >--</option>
+                                {% for tipo in tipos %}
+                                <option value="{{tipo.0}}">{{tipo.1}}</option>
+                                {% endfor %}
+                            </select>
+                            <p class="campo">Rut Proveedor:</p><input name="rutProv" class="input-form"></input>
+                            <p class="campo">Nombre insumo:</p><input name="nomInsumo" class="input-form"></input>
+                            <p class="campo">Marca:</p><input name="marca" class="input-form"></input>
+                            <p class="campo">Modelo:</p><input name="modelo" class="input-form"></input>
+                            <p class="campo">Descripcion:</p><input name="descrip" class="input-form"></input>
+                            <p class="campo">Precio:</p><input name="valor" class="input-form"></input>
+                            <!-- <p class="campo">Precio Venta:</p><input name="valorVenta" class="input-form"></input> -->
+                            <p class="campo">Imagen 1:</p><input type="file" name="imagen0" class="input-form"></input>
+                            <p class="campo">Imagen 2:</p><input type="file" name="imagen1" class="input-form"></input>
+                            <p class="campo">Imagen 3:</p><input type="file" name="imagen2" class="input-form"></input>
+                            <p class="campo">Imagen 4:</p><input type="file" name="imagen3" class="input-form"></input>   
+                            <p class="campo">Imagen 5:</p><input type="file" name="imagen4" class="input-form"></input>  
+                            <!-- <p class="campo">Stock:</p><input name="stock" class="input-form"></input>   -->
                         </table>
                         <input type="submit" value="Agregar" class="btn-enviar">
                         <input type="reset" value="Limpiar" class="btn-enviar">

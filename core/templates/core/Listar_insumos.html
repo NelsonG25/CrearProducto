@@ -26,7 +26,7 @@
         <h3>Ver Insumos</h3>
             <div class="filtro"> 
                 <label class="input-62">Filtrar por codigo o nombre: </label>
-                <input type="text" name="filtrar" placeholder="Filtrar por Rut" class="input-65" required> 
+                <input type="search" name="filtrar" placeholder="Filtrar por codigo" class="input-65" required> 
                 <input type="submit" value="Buscar" class="btn-opcion">
             </div>
         <table border="4">
@@ -46,7 +46,11 @@
             {% for producto in productos %}
             <tr>
                 <td>{{producto.0}}</td>
-                <td>{{producto.1}}</td>
+                {% for tipo in tipos %}  
+                {% if producto.1 == tipo.0 %}
+                <td>{{tipo.1}}</td>
+                {% endif %}
+                {% endfor %}
                 <td>{{producto.2}}</td>
                 <td>{{producto.3}}</td>
                 <td>{{producto.4}}</td>

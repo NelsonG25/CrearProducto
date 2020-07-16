@@ -1,9 +1,10 @@
 from django.urls import path
-from .views import index, factura, orden_compra, crear_producto, Agregar_proveedor,eliminar_proveedor,Modificar_proveedor,Listar_proveedor,Agregar_insumos,Listar_insumos,Modificar_insumos,Eliminar_insumos
+from .views import index, login, factura, orden_compra, crear_producto, Agregar_proveedor,eliminar_proveedor,Modificar_proveedor,Listar_proveedor,Agregar_insumos,Listar_insumos,Modificar_insumos,Eliminar_insumos
 
 
 urlpatterns = [
     path('', index, name="index"),
+    path('login/', login, name="login"),
     path('agregar_proveedor/', Agregar_proveedor, name="agregar_proveedor"),
     path('eliminar_proveedor/<id>/', eliminar_proveedor, name="eliminar_proveedor"),
     path('modificar_proveedor/<id>/', Modificar_proveedor, name="modificar_proveedor"),

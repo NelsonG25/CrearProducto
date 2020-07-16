@@ -1,14 +1,14 @@
 .listar_proveedor{
     margin: auto;
     font-family: sans-serif;
-    background:#2f9436;
+    border: #2b8032;
     margin-top: 3%;
     margin-block-end: 3%;
     padding-block-end: 50px;
     padding-left: 10px;
     padding-right: 10px;
     max-width: 1500px;
-    border-radius: 50px;
+
     min-height: 350px;
 }
 
@@ -22,11 +22,11 @@
 
 .listar_proveedor td{
     width: 10%;
-    color: white;
+    color: #607488;
     border-color: #014205;
-    border-radius: 50px;
+
     text-align: center;
-    padding: 10px 10px 10px;
+    padding: 10px 10px ;
 
 }
 
