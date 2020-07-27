@@ -3,8 +3,8 @@ from .views import index, login, factura, orden_compra, crear_producto, Agregar_
 
 
 urlpatterns = [
-    path('', index, name="index"),
-    path('login/', login, name="login"),
+    path('', login, name="login"),
+    path('index/', index, name="index"),
     path('agregar_proveedor/', Agregar_proveedor, name="agregar_proveedor"),
     path('eliminar_proveedor/<id>/', eliminar_proveedor, name="eliminar_proveedor"),
     path('modificar_proveedor/<id>/', Modificar_proveedor, name="modificar_proveedor"),

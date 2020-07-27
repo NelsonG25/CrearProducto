@@ -41,9 +41,10 @@ header label {
 
 #banner h9{
     font-size: 50px;
-    color: rgb(255, 255, 255);
+    color: rgb(180, 202, 177);
+    background-color: #014205;
     float: right;
-    margin-top: -120px;
+    margin-top: 350px;
 }
 
 @media (min-width:1024px) {

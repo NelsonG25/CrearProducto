@@ -1,0 +1,85 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.form {
+  display: flex;
+  width: 100%;
+}
+.form input {
+  border: 1px solid #ccc;
+  color: #333;
+  font-family: 'segoe ui';
+  font-size: 14px;
+  outline: none;
+  padding: .4rem .8rem;
+  margin-bottom: 15px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid #014205;
+}
+.btn-agregar{
+    width: 40%;
+    position: right;
+    margin-bottom: 15px;
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #014205;
+}
+.form button {
+  background-color: #014205;
+  border: 1px solid #1abc9c;
+  color: rgba(255,255,255,.93);
+  font-family: 'segoe ui';
+  margin-left: 10px;
+  padding: .1rem 1rem;
+  transition: background-color .2s ease,
+    color .2s ease;
+}
+.form button:hover {
+  background-color: #ffF;
+  color: #1abc9c;
+}
+
+.cuadro{
+    width: 95%;
+    margin: auto;
+    background: white;
+    border-radius: 8px;
+    max-width: 530px;
+}
+
+table {
+  border-collapse: collapse;
+  border: 3px solid rgb(127, 167, 123);
+  margin-top: 25px;
+  margin-left: auto;
+  width: 99%;
+}
+table thead th {
+  background-color: #64775f;
+  font-weight: 500;
+}
+table thead th,
+table tbody td {
+    width: 10%;
+  color: #333;
+  font-family: 'segoe ui';
+  background-color: #f2f2f2;
+  font-size: 14px;
+  padding: .5rem .65rem;
+}
+table thead th:not(:last-of-type),
+table tbody td:not(:last-of-type) {
+  border-right: 1px solid #ccc;
+}
+table thead tr,
+table tbody tr:not(:last-of-type) {
+  border-bottom: 1px solid #ccc;
+}

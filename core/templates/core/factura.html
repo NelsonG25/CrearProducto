@@ -23,19 +23,19 @@
                     <h4 class="formulario_titulo">Enviar Factura</h4>
                     <div class="contenedor-inputs">
                         <table>
-                            <p class="campo">Numero Factura: </p><input class="input-form"></input>
-                            <p class="campo">Rut Proveedor: </p><input class="input-form"></input>
-                            <p class="campo">Fecha: </p><input class="input-form" type="date"></input>
-                            <p class="campo">Total Neto: </p><input class="input-form"></input>
-                            <p class="campo">Numero Orden Compra: </p><input class="input-form"></input>
-                            <p class="campo">Detalle Compra: </p> </p><textarea></textarea>
+                            <p class="campo">Numero Factura: </p><input class="input-form" required></input>
+                            <p class="campo">Rut Proveedor: </p><input class="input-form" required></input>
+                            <p class="campo">Fecha: </p><input class="input-form" type="date" required></input>
+                            <p class="campo">Total Neto: </p><input class="input-form" required></input>
+                            <p class="campo">Numero Orden Compra: </p><input class="input-form" required></input>
+                            <p class="campo">Detalle Compra: </p> </p><textarea required></textarea>
                             <p class="campo">*ingrese id producto separado por una coma la cantidad</p>
                             <p class="campo">(saltar fila para uno nuevo) </p>
                             <p><br></p>
                             <p class="campo">Agregar orden de compra: </p><input class="input-form" type="file" name="archivo" /><br />     
 
                         </table>
-                        <input type="submit" value="Agregar" class="btn-enviar">
+                        <input type="submit" onclick="facAgreg()" value="Agregar" class="btn-enviar">
                         <input type="reset" value="Limpiar" class="btn-enviar">
                         <br>
                     </div>

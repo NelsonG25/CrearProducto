@@ -1,15 +1,17 @@
 {% extends 'core/base.html' %}
 {% load widget_tweaks %}
 
+
 {% load static %}
 
 
 {% block contenido %}
+<link rel="stylesheet" href="{% static 'core/css/tablaItem.css' %}">
 
         <section id="banner">
             <img src="{% static 'core/imagenes/Shiprincipal.jpg' %}">
             <div class="contenedor">
-            <h9>Envio de Factura</h9>
+            <h9>Envio Orden de compra</h9>
             </div>
         </section>
 
@@ -18,20 +20,55 @@
 
             <div class="sector-formulario">
                 <br><br><br>
+                <!-- <div class="cuadro">
+                    <h4 class="formulario_titulo">Productos por comprar</h4>
+                    <div class="contenedor-inputs">    
+
+                <form class="form" onsubmit="addPerson(event)">
+                    <section class="group">
+                        <p class="campo">Codigo Producto: </p>
+                        <input type="text" id="name" placeholder="Codigo Producto" required/>
+                        <p class="campo">Cantidad: </p>
+                        <input type="text" id="lastname" placeholder="Cantidad" required/>
+                    </section>
+                    <button type="submit" class="btn-agregar">Agregar</button>
+                </form>
+                <table style="display: inline-block">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Codigo Producto</th>
+                            <th>Cantidad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </div>
+                </div>    
+                </table> 
+            </div>   
+            <script src="https://code.jquery.com/jquery-3.1.0.js"></script> -->
+                <div class="contenedor-inputs">
                 <form action="" method="POST" class="formulario">
                     {% csrf_token %}
-                    <h4 class="formulario_titulo">Orden Compra</h4>
+                    <h4 class="formulario_titulo">Datos de orden</h4>
                     <div class="contenedor-inputs">
                         <table>
-                            <p class="campo">Numero orden: </p><input type="text">{{orden.0}}</input>
-                            <p class="campo">Rut Proveedor: </p><input class="input-form"></input>
-                            <p class="campo">Fecha: </p><input class="input-form" type="date"></input>
-                            <p class="campo">Detalle Compra: </p> </p><textarea></textarea>
-                            <p class="campo">*ingrese id producto separado por una coma la cantidad</p>
-                            <p class="campo">(saltar fila para uno nuevo) </p>
-
+                            <p class="campo">Rut Proveedor: </p><input class="input-form" name="rutProv" required></input>
+                            <p class="campo">Fecha: </p><input class="input-form" type="date" name="fecha" required>
+                            <p class="campo">Total Neto: </p><input class="input-form" name="totalNeto" required></input>
+                            <p class="campo">Detalle de insumos: </p>
+                            <br>
+                            <div class="insumos">
+                                <p class="codInsum">Codigo insumo: </p><p class="canInsum">Cantidad: </p>
+                                <input class="input-form1" name="insumo1" required></input><input class="input-form2" type="number" name="cantidad1" required></input>
+                                <input class="input-form1" name="insumo2" required></input><input class="input-form2" type="number" name="cantidad2" required></input>
+                                <input class="input-form1" name="insumo3" required></input><input class="input-form2" type="number" name="cantidad3" required></input>
+                                <input class="input-form1" name="insumo4" required></input><input class="input-form2" type="number" name="cantidad4" required></input>
+                            </div>    
                         </table>
-                        <input type="submit" value="Agregar" class="btn-enviar">
+                        <input type="submit" onclick="ordAgreg()" value="Agregar" class="btn-enviar">
                         <input type="reset" value="Limpiar" class="btn-enviar">
                         <br>
                     </div>

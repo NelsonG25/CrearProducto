@@ -3,7 +3,7 @@
 
 {% load static %}
 {% block js %}
-<script src="{% static 'core/js/jspost.js' %}"></script>
+
 
 
 {% endblock %}
@@ -27,24 +27,24 @@
                     <h4 class="formulario_titulo">Añadir Proveedor</h4>
                     <div class="contenedor-inputs">
                         <table>
-                            <p class="campo">Rut Proveedor:</p><input name="rutProv" class="input-form"></input>
-                            <p class="campo">Nombre: </p><input name="nomCom" class="input-form"></input>               
-                            <p class="campo">Fono:</p><input name="fono" class="input-form"></input>
-                            <p class="campo">Email:</p><input name="email" class="input-form"></input>
-                            <p class="campo">Direccion:</p><input name="direc" class="input-form"></input>
+                            <p class="campo">Rut Proveedor:</p><input name="rutProv" class="input-form"  required></input>
+                            <p class="campo">Nombre: </p><input name="nomCom" class="input-form" required></input>               
+                            <p class="campo">Fono:</p><input name="fono" class="input-form" required></input>
+                            <p class="campo">Email:</p><input name="email" class="input-form" required></input>
+                            <p class="campo">Direccion:</p><input name="direc" class="input-form" required></input>
                             <p class="campo">comuna:</p>
-                            <select class="combobox" name="comuna">
+                            <select class="combobox" name="comuna" required>
                                 <option >--</option>
                                 {% for comuna in comunas %}
                                 <option value="{{comuna.0}}">{{comuna.1}}</option>
                                 {% endfor %}
                             </select>
-                            <p class="campo">Giro Comercial:</p><input name="giroCom" class="input-form"></input> 
-                            <p class="campo">Razon Social:</p><input name="razonSoc" class="input-form"></input>  
+                            <p class="campo">Giro Comercial:</p><input name="giroCom" class="input-form" required></input> 
+                            <p class="campo">Razon Social:</p><input name="razonSoc" class="input-form" required></input>  
                        
                         </table>
-                        <input type="submit" value="Agregar" class="btn-enviar">
-                        <input type="reset" value="Limpiar" class="btn-enviar">
+                        <button onclick="agregar()" class="btn-enviar">Agregar</button>
+                        <button type="reset" class="btn-enviar">Limpiar</button>
                         <br>
                     </div>
                 </form>
